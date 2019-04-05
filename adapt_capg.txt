@@ -1,0 +1,474 @@
+3(1):
+import java.util.Scanner;
+
+public class StudentsGrade {
+
+    public static void main(String[] args) {
+	
+	// Start Code
+	Scanner s = new Scanner(System.in);
+	int a= s.nextInt();
+	int b= s.nextInt();
+	int c= s.nextInt();
+	double averageMarks=(a+b+c)/3;
+	if(a<0||b<0||c<0||a>100||b>100||c>100)
+	{
+		System.out.println("INVALIDMARKS");
+	}
+	else if(averageMarks>=70)
+	{
+		System.out.println("DISTINCTION");
+	}
+	else if(averageMarks>=60)
+	{
+		System.out.println("FIRST");
+	}
+	else if(averageMarks>=50)
+	{
+		System.out.println("SECOND");
+	}
+	else if(averageMarks>=40)
+	{
+		System.out.println("THIRD");
+	}
+	else if(averageMarks<40)
+	{
+		System.out.println("FAIL");
+	}
+	
+
+
+
+
+	
+	// End Code
+
+    }
+}
+
+-------------------------------------------------------------------------------------------------
+3(2):
+
+
+import java.util.Scanner;
+
+/**
+ * Main class
+ */
+public class RightAngleTriangle {
+    /**
+    * Main method
+    * @param args 
+    */
+    public static void main(String[] args) {
+	// Student code begins
+	Scanner sc = new Scanner(System.in);
+	int a= sc.nextInt();
+	int b= sc.nextInt();
+	int c= sc.nextInt();
+	if((a<b)||(a<c)||(b<c))
+	{
+		System.out.println("INVALID_INPUT");
+	}
+	else if((a*a)==(b*b)+(c*c))
+	{
+		System.out.println("RIGHT ANGLE TRIANGLE");
+	}
+	else if((a*a)!= (b*b)+(c*c))
+	{
+		System.out.println("NOT RIGHT ANGLE TRIANGLE");
+	}
+	
+	
+	
+	
+	
+	
+	
+	// Student code ends;
+	
+	
+	
+    }
+}
+------------------------------------------------------------------------------------------------------
+
+3(3):
+
+
+import java.util.Scanner;
+
+/**
+ * Main class
+ */
+public class DecimalToBinary {
+    /**
+    * Main method
+    * @param args 
+    */
+    public static void main(String[] args) {
+	
+		// Student Code Begin
+		Scanner s= new Scanner(System.in);
+		int n=s.nextInt();
+		int bin[]=new int[100];
+		if(n<1 || n>999)
+		{
+			System.out.println("INVALID_INPUT");
+		}
+		else
+		{
+			int i=0;
+			while(n>0)
+			{
+				bin[i++]=n%2;
+				n=n/2;
+			}
+			for(int j=i-1; j>=0; j--)
+			{
+			System.out.println(bin[j]);
+			}
+		}
+		
+		
+		
+		
+		// Student Code end
+		
+		
+		
+    }
+}
+--------------------------------------------------------------------------------------------------------
+3(4)
+
+
+
+import java.util.Scanner;
+
+/**
+ * Main class
+ */
+public class SumOfPrimeNumbers {
+    /**
+    * Main method
+    * @param args 
+    */
+    public static void main(String[] args) {
+	
+	// Student Code begins
+	Scanner s = new Scanner(System.in);
+	int a = s.nextInt();
+	int b = s.nextInt();
+	if((a<3 || b<3 || a>1000 || b>1000) || (a>b))
+	{
+		System.out.println("INVALID_INPUT");
+	}
+	else if(a<b)
+	{ int sum=0;
+		for(int i=a; i<=b; i++)
+		{ int c=0;
+			for(int j=2; j<i; j++)
+			{ 
+				if(i%j==0)
+				{
+					c=c+1;
+					break;
+				}}
+			if(c==0)
+			{
+				sum=sum+i;
+			}}
+		
+		System.out.println(+sum);
+	}
+	}
+}
+
+--------------------------------------------------------------------------------------------
+3(5):
+
+
+
+import java.util.Scanner;
+
+/**
+ * Main class
+ */
+public class ArmstrongNumber {
+    /**
+    * Main method
+    * @param args 
+    */
+    
+    
+    
+    
+    public static void main(String[] args) {
+	
+	
+	// Student Code starts
+	Scanner s = new Scanner(System.in);
+	int a=s.nextInt();
+	if(a<100 || a>999)
+	{
+		System.out.println("INVALID_INPUT");
+	}
+	else
+	{ int sum=0, n=a, rem;
+		while(n != 0)
+		{
+			rem=n%10;
+			sum= sum+(rem*rem*rem);
+			n=n/10;
+		}
+		if(sum==a)
+		{
+			System.out.println("ARMSTRONG");
+		}
+		else
+		{
+			System.out.println("NOT ARMSTRONG");
+		}
+		}
+	
+	
+	
+	
+	
+	// Student code ends
+	
+	
+	
+	
+	
+    }
+}
+
+-------------------------------------------------------------------------
+3(6):
+
+
+import java.util.Scanner;
+
+/**
+ * Main class
+ */
+public class FindMaxMinAge {
+    /**
+    * Main method
+    * @param args 
+    */
+    public static void main(String[] args) {
+	
+	// Student code starts here
+	Scanner s= new Scanner(System.in);
+	int n = s.nextInt();
+	
+	if(n<1 || n>20)
+	{
+		System.out.println("INVALID_INPUT");
+	}
+	else
+	{
+		int arr[] = new int[n];
+	for(int i=0; i<n; i++)
+	{
+		arr[i]=s.nextInt();
+	}
+		int m=arr[0];
+		int l=arr[0];
+	for(int i=0; i<n; i++)
+	{
+		if(arr[i]>l) l=arr[i];
+		else if(arr[i]<m) m=arr[i];
+	}
+	System.out.println("MIN="+m);
+	System.out.println("MAX="+l);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	// Student code ends here
+	
+	
+	
+    }
+}
+
+--------------------------------------------------------------------------------
+3(7):
+
+
+
+import java.util.Scanner;
+
+
+/**
+ * Main class
+ */
+public class SortNumbers {
+    /**
+    * Main method
+    * @param args 
+    */
+    public static void main(String[] args) {
+		
+		// Student code begins
+		
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		if(n<1 || n>20)
+		{
+			System.out.println("INVALID_INPUT");
+		}
+		else if(n%2 != 0)
+		{ int temp, i;
+		int a[] = new int[n];
+		for(i=0; i<n; i++)
+		{
+			a[i]= s.nextInt();
+		}
+		for(i=0; i<n; i++)
+		{
+			for(int j=i+1; j<n; j++)
+			{
+				if(a[i]<a[j])
+				{
+					temp=a[i];
+					a[i]=a[j];
+					a[j]=temp;
+				}
+			}
+		}
+		for(i=0; i<n; i++)
+		{
+			System.out.println(a[i] + " ");
+		}
+		}
+else if(n%2 == 0)
+		{ int temp, i;
+		int a[] = new int[n];
+		for(i=0; i<n; i++)
+		{
+			a[i]= s.nextInt();
+		}
+		for(i=0; i<n; i++)
+		{
+			for(int j=i+1; j<n; j++)
+			{
+				if(a[i]>a[j])
+				{
+					temp=a[i];
+					a[i]=a[j];
+					a[j]=temp;
+				}
+			}
+		}
+		for(i=0; i<n; i++)
+		{
+			System.out.println(a[i] + " ");
+		}
+		}
+		
+		
+		
+		
+		
+		
+		
+		// Student code ends
+		
+
+		
+		
+		
+    }
+}
+-------------------------------------------------------------------------------------------------------------
+4(1):
+
+Accounts.java-->
+
+
+public class Account {
+	//CODE START
+int accountNo;
+double balance;
+String accountType;
+static int counter=0;
+Account(double balance, String accountType)
+{
+	
+	this.balance= balance;
+	this.accountType= accountType;
+	this.accountNo=++counter;
+}
+
+double depositAmount(double x)
+{
+return x;
+
+}
+void printAccountDetails(Account a)
+{
+		System.out.println("[Acct No : "+a.accountNo+", Type : "+a.accountType+", Balance : "+a.balance+"]");
+
+}
+	
+	//CODE END
+}
+
+AccountDetails.java-->
+
+
+import java.util.Scanner;
+
+/**
+ * Main class
+ */
+public class AccountDetails {
+
+	//CODE START
+	public static void main(String args[])
+	{
+	Scanner s = new Scanner(System.in);
+
+	double a1balance= s.nextDouble();
+//	s.nextLine();
+	String a1accountType=s.nextLine();
+
+	double a1amount=s.nextDouble();
+	
+double a2balance= s.nextDouble();
+	//s.nextLine();
+	String a2accountType=s.nextLine();
+	
+	double a2amount=s.nextDouble();
+	
+	Account a1= new Account(a1balance, a1accountType);
+	
+	a1.printAccountDetails(a1);
+
+        double xx1=a1.depositAmount(a1amount);
+        double x2=xx1+a1.balance;
+    System.out.println("New Balance : " +x2);
+	
+	Account a2= new Account(a2balance, a2accountType);
+	
+	a2.printAccountDetails(a2);
+   double xx=a2.depositAmount(a2amount);
+    double xx3=xx+a2.balance;
+   System.out.println("New Balance : " +xx3);
+	
+
+
+}
+}
+
+----------------------------------------------------------------------------------------------------
